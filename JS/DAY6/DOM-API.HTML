@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body id="bdy">
+    <div id="item">Hello VSS</div>
+    <!-- now our requirement is ki hamne ye jo hello vss likha hai mjhe ye javascript me read krna hai ki user ne iske andar kya likha hai. JS hai andha, js is blind. use nahi pata ki kya likha hai, jo javascript ko jaake puchna pdhta hai ki kya likha hai, toh js kaise puchega? => we'll write a script tag and isko get karenge. -->
+  </body>
+</html>
+<script>
+  // this is to get Element who has id
+
+  //   const itemElem = document.getElementById("item");
+  //    id (item) pass ki or usko variable (itemElem) me store kr llia
+  //   console.log(itemElem);
+
+  //   now to get text of that element
+  //   const itemElem = document.getElementById("item");
+  //   console.log(itemElem.innerText);
+  //   innerText or textContent
+
+  //   also to get element of body we'll give id to body
+  //   const bodyElem = document.getElementById("bdy");
+  //   console.log(bodyElem.innerHTML);
+
+  //   ye hamne abhi element ko read kia ab ham element ko write karenge
+  const itemElem = document.getElementById("item");
+  itemElem.innerText = "Goodmorning";
+
+  //   yaha hamne kya kia? => item element banaya, use get kia javascript me (read kia), fir innerText se text ko update kia goodmorning me(write kia)
+</script>

@@ -1,0 +1,16 @@
+.maindiv {
+  border: 1px solid black;
+  height: 1000px;
+  width: 1350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parentdiv {
+  border: 1px solid black;
+  height: 1000px;
+  width: 750px;
+}
+.upperpart {
+  background-color: rgb(208, 185, 230);
+}

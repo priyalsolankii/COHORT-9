@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCOPE</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  console.log("a: ", a);
+  var a = 10;
+  let b = 20;
+  const c = 30;
+
+  // q2 - recap
+  var a1 = 10;
+  let a2 = 30;
+  const a3 = 50;
+
+  function tryMe() {
+    var a11 = 10;
+    let a22 = 30;
+    const a33 = 50;
+
+    console.log({ a1, a2, a3 });
+  }
+
+  // q3 - recap
+  var a1 = 10;
+  let a2 = 30;
+  const a3 = 50;
+
+  function tryMe() {
+    var a11 = 10;
+    let a22 = 30;
+    const a33 = 50;
+
+    for (let i = 0; i < 4; i++) {
+      console.log({ i });
+    }
+
+    for (var j = 0; i < 4; i++) {
+      console.log({ j });
+    }
+    return all;
+  }
+</script>

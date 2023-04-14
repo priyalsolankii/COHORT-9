@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCOPE EVAL</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // q1
+  function foo() {
+    let a;
+    window.b = 0;
+    a = window.b;
+    a++;
+    return a;
+  }
+  foo();
+  typeof a;
+  typeof window.b;
+
+  // q1 - part2
+
+  function foo() {
+    let a;
+    window.b = 0;
+    a = window.b;
+    a++;
+    return a;
+  }
+  foo();
+  console.log("typeof a", typeof a);
+  console.log(a);
+
+  //   q2
+  console.log(a);
+  var a = 10;
+
+  //  imp ans-  As we can see we have var a = 10 , we all know javascript by default gives memory allocation to all variables and var is accessible before its initialisation therefore it will print "undefined"
+
+  //   q3
+  console.log(a);
+  let a = 10;
+
+  // here a has a block scope and since we have defined a with let variable we cannot access (a) it before initialisation therefore it will throw error
+  // here a is in dead zone and we cannot access it before its initialisation , it is called temporal dead zone
+
+  //   q4
+
+  console.log(a);
+  const a = 10;
+
+  // here has a block scope and since a is defined with const cariable we cannot access it before its initialisation therefore it will throw error
+
+  //   q5
+  let a = 10;
+  console.log(a);
+  const a = 10;
+
+  //   variable a agar let ne le lia toh koi or nahi le sakta
+
+  // q6
+
+  function tryMe() {
+    let test = 10;
+    b = 30;
+  }
+
+  console.log(test, b);
+
+  //   q7
+  function tryMe() {
+    let test = 10;
+    b = 30; // => window.b = 30
+    return test;
+  }
+
+  console.log(b, this.b, window.b);
+
+  // this ka matlab hota hai ki tum currently kisko point kar rahe ho or current yaha pe hai window i.e. this = window ; islie this and window ka answer same aaega
+  //   matlab this and window equal rehta hai? - Scope pe depend karta hai, right now hamara code global scope me hai islie both are equal , ye change bhi ho jata hai
+
+  //   one more point - agar b let ya const se define hota yaha toh this or window ise access hi nahi kar pate kyuki this or window global sope me search karte hai
+
+  //   jab ham javascript me code banate hai toh automatically browser uske sath bahot saari property atach kar deta hai by default , vo saari properties attach hoti hai windows object me window scope me
+
+  //   q8
+
+  function tryMe() {
+    let test = 10;
+    b = 30;
+    return test;
+  }
+  tryMe();
+  console.log(b, this.b, window.b);
+
+  //   q9
+  function tryMe() {
+    let test = 10;
+    b = 30;
+    return test;
+  }
+
+  console.log(typeof typeof b);
+
+  //   typeOf b = "undefined" (double quote me undefined ek string hai )
+  //   islie typeof "undefined" will give string
+  //   for ex: abcd (type in console) will give error bc ye memory me hai hi nahi, the typsof abcd (type in console) will give "undefined", then typeof typeof abcd (type in console) will give string
+
+  //   q10
+  function tryMe() {
+    let test = 10;
+    b = 30;
+    console.log(this.text);
+  }
+  tryMe();
+  console.log(b, this.b, window.b);
+
+  //   q11
+  function checkAccess() {
+    let x = 10;
+    var y = 20;
+    const z = 40;
+
+    for (let i = 0; i < 5; i++) {
+      var loopVar = 1;
+    }
+    console.log(x, y, z, loopVar);
+  }
+  checkAccess();
+  console.log(loopVar, window.y, window.x);
+</script>

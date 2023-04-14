@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let a = 10;
+  const b = 20;
+
+  function tryMe() {
+    let a3 = 10;
+    function tryMe2() {
+      let a4 = 10;
+      function tryMe3() {
+        let a5 = 10;
+      }
+      tryMe3();
+    }
+    tryMe();
+  }
+  tryMe();
+</script>
+
+<!-- example - mall example
+mall  ->  foodcourt  ->  macd  (macd me jaane ke li (access krne k lie) foodcourt me jana pdega nd foodcourt ko access krne ke lie mall ko access krnna pdega, bina mall me jae foodcourt ni jaa skte and bina foodcourt me jae macd nhi jaa skte)
+mall  ->  foodcourt  ->  macd
+|              |           |
+tryMe       tryMe2         tryMe3 ( similarly tryme3 ko access krne krne ke lie pehle tryme2 call krna pdega and trme2 ko access krne ke lie pehle tryme call karna pdega)
+
+pehle konsa function call hoga? order : therefore pehle tryMe call hoga then tryMe2 call hoga then tryMe3 call hoga -->
+<!-- pehle konsa function pora run hoga? order : jab tak ham macd se bahar ni aaenge tab tak ham foodcourt se bahar nahi aa sakte and jab tak ham foodcourt se bahar nahi aa jate tab tak ham mall se bahar ni aa paenge i.e. mall se bahar aane ke lie pehle foodcourt se bahar aana pdega and foodcourt se bahar aane ke lie macd se bahar aana padega
+similarly , code me jab tak tryme3 khatam nahi hoga tab tak thryme2 khatam nahi hoga and jab tak tryme2 khatam nahi hoga tab tak tryme khatam nahi hoga
+i.e. jab tak tryme3 poora execute na ho jae tab tak tryme2 complete run nahhi ho sakta and jab tak tryme2 poora complete run na ho jae tab ak tryme compleete run nahi ho skta -->
