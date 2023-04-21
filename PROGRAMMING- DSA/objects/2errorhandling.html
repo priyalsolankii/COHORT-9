@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //   when we try to access any key which is not present in our object then we will get error and our code will crash and we do no  want our code to crash i.e. we do not want ki hamara code na chale thats why we use this error handling, 'OPTIONAL CHAINING' is the method to tackle error handling. we do this by just adding question mark before dot. by doin so we wont get error instead we'll get undefined and our code will not crash
+
+  const profile = {
+    name: "Salman",
+    city: "Bhopal",
+  };
+
+  console.log(profile.name); // Salman
+  console.log(profile.state); // undefined
+
+  try {
+    console.log(profile.details.info); //
+  } catch (err) {
+    console.log(err);
+  }
+
+  if (profile.details && profile.details.hasOwnProperty("info")) {
+    console.log(profile.details.info);
+  }
+  // Optional chaining
+  console.log(profile?.details?.info || "Not available");
+</script>
